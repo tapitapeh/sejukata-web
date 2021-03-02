@@ -19,7 +19,7 @@
         <img
           :src="ip.items[0].coverImage.url"
           alt=""
-          class="h-full object-cover w-full"
+          class="h-full mx-auto object-cover w-full md:max-h-70vh md:w-auto"
         />
         <p class="mt-2 text-xs text-center text-gray-600 italic">
           {{ ip.items[0].coverImage.title }}
@@ -111,12 +111,3 @@ export default {
   }
 };
 </script>
-
-<style lang="">
-::selection {
-  background: #53d0ec; /* WebKit/Blink Browsers */
-}
-::-moz-selection {
-  background: #53d0ec; /* Gecko Browsers */
-}
-</style>

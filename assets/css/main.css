@@ -20,3 +20,12 @@
   --color-text-selection: #53d0ec;
 }
 --color-text-selection: #53d0ec;
+
+::selection {
+  background: #53d0ec;
+  color: #313848; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #53d0ec; /* Gecko Browsers */
+  color: #313848;
+}
