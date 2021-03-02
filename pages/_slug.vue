@@ -44,8 +44,18 @@ import RichTextRenderer from "contentful-rich-text-vue-renderer";
 export default {
   head() {
     return {
-      title: this.loading <= 0 ? this.ip.items[0].title : ""
-      // description
+      title: this.loading <= 0 ? this.ip.items[0].title : "",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.loading <= 0 ? this.ip.items[0].subtitle : ""
+        }
+      ],
+      htmlAttrs: {
+        lang: "id",
+        amp: true
+      }
     };
   },
   components: {

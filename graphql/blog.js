@@ -5,6 +5,7 @@ query($slug: String!) {
   ip: blogCollection(where: {url: $slug }, limit: 1) {
     items {
       title
+      subtitle
       url
       coverImage {
         url

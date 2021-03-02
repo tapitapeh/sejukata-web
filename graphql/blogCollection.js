@@ -5,6 +5,7 @@ query {
   ip: blogCollection(order: datetime_DESC) {
     items {
       title
+      subtitle
       url
       coverImage {
         url

@@ -21,10 +21,19 @@
               />
             </div>
             <div class="">
-              <h2 class="font-medium font-theme text-lg sm:text-xl md:text-2xl">
+              <h2
+                class="font-medium font-theme text-xl sm:text-2xl md:text-3xl"
+              >
                 {{ item.title }}
               </h2>
-              <p class="text-gray-600">{{ item.subtitle }}</p>
+              <p class="mt-4 text-gray-500">
+                {{ item.subtitle }}
+                <span class="text-blue-500 italic hover:text-blue-700"
+                  ><nuxt-link :to="`/${item.url}`"
+                    >Baca seterusnya</nuxt-link
+                  ></span
+                >
+              </p>
             </div>
           </div>
         </nuxt-link>

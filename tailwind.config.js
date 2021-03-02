@@ -5,13 +5,13 @@ module.exports = {
       'default': ['Libre Baskerville'],
       'theme': ['Libre Baskerville']
     },
-    colors: {
-      'black': '#313848',
-      't-white': '#F8F0EE',
-      't-red': '#E5386D⁣',
-      't-blue': '#53D0EC',
-      't-blue-dark': '#2748A0'
-    },
+    // colors: {
+    //   'black': '#313848',
+    //   't-white': '#F8F0EE',
+    //   't-red': '#E5386D⁣',
+    //   't-blue': '#53D0EC',
+    //   't-blue-dark': '#2748A0'
+    // },
     typography: {
       DEFAULT: {
         css: {
@@ -30,13 +30,13 @@ module.exports = {
       },
     },
     extends: {
-      //   colors: {
-      //     'black': '#313848',
-      //     't-white': '#F8F0EE',
-      //     't-red': '#E5386D⁣',
-      //     't-blue': '#53D0EC',
-      //     't-blue-dark': '#2748A0'
-      //   }
+      colors: {
+        'black': '#313848',
+        't-white': '#F8F0EE',
+        't-red': '#E5386D⁣',
+        't-blue': '#53D0EC',
+        't-blue-dark': '#2748A0'
+      }
     }
   },
   plugins: [
