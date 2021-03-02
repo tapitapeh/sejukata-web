@@ -28,7 +28,8 @@
               </h2>
               <p class="mt-4 text-gray-500">
                 {{ item.subtitle }}
-                <span class="text-blue-500 italic hover:text-blue-700"
+                <span
+                  class="text-t-blue-dark transition italic hover:text-t-blue hover:underline"
                   ><nuxt-link :to="`/${item.url}`"
                     >Baca seterusnya</nuxt-link
                   ></span
