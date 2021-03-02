@@ -1,0 +1,22 @@
+{
+  "name": "nuxtjs-windicss-starter",
+  "version": "1.0.0",
+  "description": "Starter Pack",
+  "author": "Achan",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/apollo": "^4.0.1-rc.5",
+    "contentful-rich-text-vue-renderer": "^2.0.1",
+    "graphql-tag": "^2.11.0",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "vue-windicss-preprocess": "^2.1.0"
+  }
+}
