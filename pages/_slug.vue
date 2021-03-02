@@ -9,11 +9,11 @@
     <div class="">
       <div class="mx-auto w-2/3">
         <h1
-          class="font-theme font-semibold text-center sm:text-2xl md:text-3xl lg:text-5xl"
+          class="font-theme font-semibold text-center text-xl sm:text-2xl md:text-3xl lg:text-5xl"
         >
           {{ ip.items[0].title }}
         </h1>
-        <p></p>
+        <p class="mt-6 text-center text-gray-500 text-sm">{{ dateTime }}</p>
       </div>
       <div v-if="ip.items[0].coverImage" class="mt-10 px-10">
         <img
@@ -60,6 +60,36 @@ export default {
   },
   components: {
     RichTextRenderer
+  },
+  computed: {
+    dateTime() {
+      const months = [
+        "Januari",
+        "Februari",
+        "Maret",
+        "April",
+        "Mei",
+        "Juni",
+        "Juli",
+        "Agustus",
+        "September",
+        "Oktober",
+        "November",
+        "Desember"
+      ];
+
+      if (this.loading <= 0 && this.ip.items[0].datetime) {
+        const d = new Date(this.ip.items[0].datetime);
+        const year = d.getFullYear();
+        const date = d.getDate();
+        const monthIndex = d.getMonth();
+        const monthName = months[monthIndex];
+
+        return `${date} ${monthName} ${year}`;
+      }
+
+      return "";
+    }
   },
   data() {
     return {

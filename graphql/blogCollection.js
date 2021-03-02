@@ -6,6 +6,7 @@ query {
     items {
       title
       subtitle
+      datetime
       url
       coverImage {
         url

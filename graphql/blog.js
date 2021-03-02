@@ -6,6 +6,7 @@ query($slug: String!) {
     items {
       title
       subtitle
+      datetime
       url
       coverImage {
         url

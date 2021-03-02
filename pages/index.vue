@@ -1,6 +1,8 @@
 <template>
   <section class="container mx-auto px-10">
-    <ul class="gap-5 grid grid-cols-1 sm:gap-12 sm:grid-cols-2 lg:grid-cols-3">
+    <ul
+      class="gap-5 gap-y-20 grid grid-cols-1 sm:gap-12 sm:grid-cols-2 lg:grid-cols-3"
+    >
       <li v-for="item in ip.items" :key="item.title" class="">
         <nuxt-link :to="`/${item.url}`">
           <div class="flex flex-wrap">
@@ -26,14 +28,15 @@
               >
                 {{ item.title }}
               </h2>
-              <p class="mt-4 text-gray-500">
+              <p class="mt-4 text-gray-400">
                 {{ item.subtitle }}
                 <span
-                  class="text-t-blue-dark transition italic hover:text-t-blue hover:underline"
-                  ><nuxt-link :to="`/${item.url}`"
-                    >Baca seterusnya</nuxt-link
-                  ></span
+                  class="text-xl text-t-blue transition hover:text-t-blue-dark hover:underline"
+                  ><nuxt-link :to="`/${item.url}`">→</nuxt-link></span
                 >
+              </p>
+              <p class="mt-6 text-xs text-gray-400 italic">
+                Chairun Nisa • {{ dateTime(item.datetime) }}
               </p>
             </div>
           </div>
@@ -61,6 +64,36 @@ export default {
       loading: 0,
       ip: {}
     };
+  },
+  methods: {
+    dateTime(_date) {
+      const months = [
+        "Januari",
+        "Februari",
+        "Maret",
+        "April",
+        "Mei",
+        "Juni",
+        "Juli",
+        "Agustus",
+        "September",
+        "Oktober",
+        "November",
+        "Desember"
+      ];
+
+      if (_date) {
+        const d = new Date(_date);
+        const year = d.getFullYear();
+        const date = d.getDate();
+        const monthIndex = d.getMonth();
+        const monthName = months[monthIndex];
+
+        return `${date} ${monthName} ${year}`;
+      }
+
+      return "";
+    }
   },
   apollo: {
     ip: {
