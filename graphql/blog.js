@@ -4,6 +4,9 @@ export const blogsQuery = gql`
 query($slug: String!) {
   ip: blogCollection(where: {url: $slug }, limit: 1) {
     items {
+      sys {
+        id
+      }
       title
       subtitle
       datetime
@@ -15,7 +18,28 @@ query($slug: String!) {
       }
       content {
         json
-
+        links {
+          assets {
+            block {
+              sys {
+                id
+              }
+              url
+              title
+              description
+            }
+          }
+        }
+      }
+      author {
+        ... on Author {
+          name
+          image {
+            url
+          }
+          description
+          social
+        }
       }
     }
   }

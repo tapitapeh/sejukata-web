@@ -13,6 +13,14 @@ query {
         title
         description
       }
+      author {
+        ... on Author {
+          name
+          image {
+            url
+          }
+        }
+      }
     }
   }
 }

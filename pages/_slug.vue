@@ -32,7 +32,10 @@
         </p>
       </div>
       <article class="my-10 mx-auto px-10 transition prose lg:px-0 lg:prose-xl">
-        <RichTextRenderer :document="ip.items[0].content.json" />
+        <RichTextRenderer
+          :document="ip.items[0].content.json"
+          :nodeRenderers="getRenderOptions(ip.items[0].content.links)"
+        />
       </article>
     </div>
   </section>
@@ -41,6 +44,8 @@
 <script>
 import { blogsQuery } from "@/graphql/blog";
 import RichTextRenderer from "contentful-rich-text-vue-renderer";
+import { BLOCKS, INLINES } from "@contentful/rich-text-types";
+
 export default {
   head() {
     return {
@@ -89,6 +94,31 @@ export default {
       }
 
       return "";
+    }
+  },
+  methods: {
+    getRenderOptions(links) {
+      // create an asset block map
+
+      const assetBlockMap = new Map();
+
+      // loop through the assets and add them to the map
+
+      for (const asset of links.assets.block) {
+        assetBlockMap.set(asset.sys.id, asset);
+      }
+
+      return {
+        [BLOCKS.EMBEDDED_ASSET]: (node, next, h, key) => {
+          const asset = assetBlockMap.get(node.data.target.sys.id);
+
+          // return h("img", { src: asset.url });
+          return h("div", {}, [
+            h("img", { attrs: { src: asset.url } }),
+            h("p", { class: "text-center text-sm italic" }, asset.title)
+          ]);
+        }
+      };
     }
   },
   data() {
