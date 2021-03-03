@@ -17,6 +17,7 @@
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
+    "@nuxtjs/google-analytics": "^2.4.0",
     "vue-windicss-preprocess": "^2.1.0"
   }
 }
