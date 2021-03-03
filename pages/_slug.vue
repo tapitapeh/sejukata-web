@@ -39,6 +39,13 @@
       </article>
     </div>
     <div class="container mx-auto px-10">
+      <ShareThis
+        v-if="ip.items[0]"
+        :sharing="sharing"
+        :sosmed="sosmed"
+      ></ShareThis>
+    </div>
+    <div class="container mx-auto px-10 mt-20">
       <Disqus shortname="sejukata"></Disqus>
     </div>
   </section>
@@ -98,6 +105,23 @@ export default {
       }
 
       return "";
+    },
+    sosmed() {
+      return ["facebook", "twitter", "whatsapp"];
+    },
+    sharing() {
+      let res = {};
+      if (process.browser) {
+        res = {
+          url: window.location.href,
+          title: this.ip.items[0].title,
+          description: this.ip.items[0].description,
+          quote: this.ip.items[0].description,
+          hashtags: "sejukata",
+          twitterUser: "sejukata"
+        };
+      }
+      return res;
     }
   },
   methods: {

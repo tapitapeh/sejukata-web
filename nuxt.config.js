@@ -15,7 +15,11 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { as: "style", rel: 'stylesheet preload prefetch preconnect', href: 'https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Lora:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap' },
+      { rel: 'icon', type: 'image/png', sizes: "16x16", href: '/favicon-16x16.png' },
+      { rel: 'icon', type: 'image/png', sizes: "32x32", href: '/favicon-32x32.png' },
+      // { rel: 'apple-touch-icon', type: 'image/png', sizes: "180x180", href: '/apple-touch-icon.png' },
+      { rel: 'manifest', href: '/site.webmanifest' },
+      { as: "style", rel: 'stylesheet preload prefetch preconnect', href: 'https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap' },
     ]
   },
   /*
@@ -39,8 +43,16 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    '@nuxtjs/fontawesome',
+    '@nuxtjs/pwa'
   ],
+  fontawesome: {
+    icons: {
+      solid: ['faCommentDots', 'faEnvelope', 'faCircle', 'faChevronUp'],
+      brands: ['faFacebookF', 'faTwitter', 'faLinkedin', 'faLine', 'faQuora', 'faTelegram', 'faWhatsapp']
+    }
+  },
   googleAnalytics: {
     id: process.env.GOOGLE_ANALYTICS_ID, // Use as fallback if no runtime config is provided
   },
@@ -54,6 +66,7 @@ export default {
   */
   modules: [
     '@nuxtjs/apollo',
+    'vue-social-sharing/nuxt',
   ],
 
   apollo: {
