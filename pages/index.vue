@@ -35,9 +35,18 @@
                   ><nuxt-link :to="`/${item.url}`">→</nuxt-link></span
                 >
               </p>
-              <p class="mt-6 text-xs text-gray-400 italic">
-                Chairun Nisa • {{ dateTime(item.datetime) }}
-              </p>
+              <div class="flex items-center mt-6 text-xs text-gray-400 italic">
+                <div>
+                  <img
+                    :src="item.author.image.url"
+                    class="rounded-full w-4 h-4"
+                    alt=""
+                  />
+                </div>
+                <p class="ml-2">
+                  {{ item.author.name }} • {{ dateTime(item.datetime) }}
+                </p>
+              </div>
             </div>
           </div>
         </nuxt-link>
