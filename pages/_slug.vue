@@ -38,13 +38,16 @@
         />
       </article>
     </div>
+    <div class="container mx-auto px-10">
+      <Disqus shortname="sejukata"></Disqus>
+    </div>
   </section>
 </template>
 
 <script>
 import { blogsQuery } from "@/graphql/blog";
 import RichTextRenderer from "contentful-rich-text-vue-renderer";
-import { BLOCKS, INLINES } from "@contentful/rich-text-types";
+import { BLOCKS } from "@contentful/rich-text-types";
 
 export default {
   head() {
@@ -65,6 +68,7 @@ export default {
   },
   components: {
     RichTextRenderer
+    // applauseButton
   },
   computed: {
     dateTime() {

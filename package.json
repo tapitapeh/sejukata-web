@@ -12,9 +12,11 @@
   },
   "dependencies": {
     "@nuxtjs/apollo": "^4.0.1-rc.5",
+    "applause-button": "^3.4.0",
     "contentful-rich-text-vue-renderer": "^2.0.1",
     "graphql-tag": "^2.11.0",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "vue-disqus": "^4.0.1"
   },
   "devDependencies": {
     "@nuxtjs/google-analytics": "^2.4.0",

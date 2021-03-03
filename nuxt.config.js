@@ -32,6 +32,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/applause-button.js',
+    '~/plugins/vue-disqus.js',
   ],
   /*
   ** Nuxt.js dev-modules
