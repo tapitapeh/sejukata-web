@@ -38,7 +38,12 @@
         />
       </article>
     </div>
-    <div class="container mx-auto px-8">
+    <p class="text-center my-10">• • •</p>
+    <div>
+      <Author :item="ip.items[0].author"></Author>
+    </div>
+    <p class="text-center my-10">• • •</p>
+    <div class="container mx-auto px-8 mt-10">
       <ShareThis
         v-if="ip.items[0]"
         :sharing="sharing"

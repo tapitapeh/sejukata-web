@@ -42,7 +42,7 @@
                 <div>
                   <img
                     :src="item.author.image.url"
-                    class="rounded-full w-4 h-4"
+                    class="rounded-full w-10 h-10"
                     alt=""
                   />
                 </div>
