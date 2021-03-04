@@ -64,22 +64,32 @@ import { BLOCKS } from "@contentful/rich-text-types";
 export default {
   head() {
     return {
-      title: this.loading <= 0 ? this.ip.items[0].title : "Sejukata",
+      title:
+        this.loading <= 0 ? this.ip.items[0].title + " — Sejukata" : "Sejukata",
       meta: [
         {
           hid: "og:title",
           name: "og:title",
-          content: this.loading <= 0 ? this.ip.items[0].title : "Sejukata"
+          content:
+            this.loading <= 0
+              ? this.ip.items[0].title + " — Sejukata"
+              : "Sejukata"
         },
         {
           hid: "og:title",
           name: "og:title",
-          content: this.loading <= 0 ? this.ip.items[0].title : "Sejukata"
+          content:
+            this.loading <= 0
+              ? this.ip.items[0].title + " — Sejukata"
+              : "Sejukata"
         },
         {
           hid: "apple-mobile-web-app-title",
           name: "apple-mobile-web-app-title",
-          content: this.loading <= 0 ? this.ip.items[0].title : "Sejukata"
+          content:
+            this.loading <= 0
+              ? this.ip.items[0].title + " — Sejukata"
+              : "Sejukata"
         },
         {
           hid: "og:site_name",
@@ -88,8 +98,21 @@ export default {
         },
         {
           hid: "og:description",
-          name: "og:site_name",
+          name: "og:description",
           content: this.loading <= 0 ? this.ip.items[0].subtitle : "Sejukata"
+        },
+        {
+          hid: "og:type",
+          name: "og:type",
+          content: "article"
+        },
+        {
+          hid: "og:image",
+          name: "og:image",
+          content:
+            this.loading <= 0 && this.ip.items[0].coverImage
+              ? this.ip.items[0].coverImage.url
+              : "https://sejukata.com/android-chrome-512x512.png"
         },
         {
           hid: "description",
