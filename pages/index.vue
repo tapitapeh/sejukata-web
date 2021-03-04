@@ -6,20 +6,23 @@
       <li v-for="item in ip.items" :key="item.title" class="">
         <nuxt-link :to="`/${item.url}`">
           <div class="flex flex-wrap">
-            <div class="mb-4 w-full">
+            <div
+              class="w-full relative mb-4 overflow-hidden"
+              style="padding-top: 100%;"
+            >
               <img
                 v-if="item.coverImage"
                 :src="item.coverImage.url"
                 alt=""
-                width="1000"
-                height="1000"
-                class="h-full object-cover w-full"
+                width="100%"
+                height="100%"
+                class="object-cover h-full absolute top-0 left-0"
               />
               <img
                 v-else
                 src="http://unsplash.it/500/500?gravity=center"
                 alt=""
-                class="h-full object-cover w-full"
+                class="object-cover h-full absolute top-0 left-0"
               />
             </div>
             <div class="">

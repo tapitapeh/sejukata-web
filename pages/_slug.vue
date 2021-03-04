@@ -15,13 +15,13 @@
         </h1>
         <p class="mt-6 text-center text-gray-500 text-sm">{{ dateTime }}</p>
       </div>
-      <div v-if="ip.items[0].coverImage" class="mt-10 px-10">
+      <div v-if="ip.items[0].coverImage" class="mt-10">
         <img
           :src="ip.items[0].coverImage.url"
           alt=""
           class="h-full mx-auto object-cover w-full md:max-h-70vh md:w-auto"
         />
-        <p class="mt-2 text-xs text-center text-gray-600 italic">
+        <p class="mt-2 text-xs text-center text-gray-500 italic px-8">
           {{ ip.items[0].coverImage.title }}
           <span v-if="ip.items[0].coverImage.description"
             >—
@@ -31,21 +31,21 @@
           >
         </p>
       </div>
-      <article class="my-10 mx-auto px-10 transition prose lg:px-0 lg:prose-xl">
+      <article class="my-10 mx-auto px-8 transition prose lg:px-0 lg:prose-xl">
         <RichTextRenderer
           :document="ip.items[0].content.json"
           :nodeRenderers="getRenderOptions(ip.items[0].content.links)"
         />
       </article>
     </div>
-    <div class="container mx-auto px-10">
+    <div class="container mx-auto px-8">
       <ShareThis
         v-if="ip.items[0]"
         :sharing="sharing"
         :sosmed="sosmed"
       ></ShareThis>
     </div>
-    <div class="container mx-auto px-10 mt-20">
+    <div class="container mx-auto px-8 mt-20">
       <Disqus shortname="sejukata"></Disqus>
     </div>
   </section>
