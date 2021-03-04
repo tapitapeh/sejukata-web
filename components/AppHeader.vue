@@ -1,29 +1,31 @@
 <template>
-  <nav class="container relative h-16 flex justify-between mx-auto">
-    <div
-      class="absolute left-0 h-full sm:relative z-10 px-2 flex items-center lg:px-0"
-    >
-      <router-back to="/" class="router-back"> </router-back>
-    </div>
+  <nav class="fixed w-full bg-white">
+    <div class="relative container h-16 flex justify-between mx-auto">
+      <div
+        class="absolute left-0 h-full sm:relative z-10 px-2 flex items-center lg:px-0"
+      >
+        <router-back to="/" class="router-back"> </router-back>
+      </div>
 
-    <div
-      class="relative z-0 flex-1 px-2 flex items-center justify-center sm:absolute sm:inset-0"
-    >
-      <nuxt-link to="/">
-        <img
-          src="~assets/img/sejukata-logo.svg"
-          alt=""
-          class="h-8 hidden sm:block"
-        />
-        <img
-          src="~assets/img/sejukata-icon.svg"
-          alt=""
-          class="h-8 block sm:hidden"
-        />
-      </nuxt-link>
-    </div>
+      <div
+        class="relative z-0 flex-1 px-2 flex items-center justify-center sm:absolute sm:inset-0"
+      >
+        <nuxt-link to="/">
+          <img
+            src="~assets/img/sejukata-logo.svg"
+            alt=""
+            class="h-8 hidden sm:block"
+          />
+          <img
+            src="~assets/img/sejukata-icon.svg"
+            alt=""
+            class="h-8 block sm:hidden"
+          />
+        </nuxt-link>
+      </div>
 
-    <div class="relative z-10 px-2 flex items-center lg:px-0"></div>
+      <div class="relative z-10 px-2 flex items-center lg:px-0"></div>
+    </div>
   </nav>
 </template>
 
