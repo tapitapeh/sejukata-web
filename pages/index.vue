@@ -95,6 +95,16 @@ export default {
           hid: "description",
           name: "description",
           content: "Tulisan Berbicara, Hati Mendengar"
+        },
+        {
+          hid: "og:type",
+          name: "og:type",
+          content: "website"
+        },
+        {
+          hid: "og:image",
+          name: "og:image",
+          content: "https://sejukata.com/android-chrome-512x512.png"
         }
       ],
       htmlAttrs: {
