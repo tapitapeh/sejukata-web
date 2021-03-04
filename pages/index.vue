@@ -41,6 +41,7 @@
               <div class="flex items-center mt-6 text-xs text-gray-400 italic">
                 <div>
                   <img
+                    v-if="item.author.image"
                     :src="item.author.image.url"
                     class="rounded-full w-10 h-10"
                     alt=""
