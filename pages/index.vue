@@ -64,8 +64,43 @@ import RichTextRenderer from "contentful-rich-text-vue-renderer";
 export default {
   head() {
     return {
-      title: "Tulisan Berbicara, Hati Mendengar"
-      // description
+      title: "Sejukata — Tulisan Berbicara, Hati Mendengar",
+      meta: [
+        {
+          hid: "og:title",
+          name: "og:title",
+          content: "Sejukata"
+        },
+        {
+          hid: "og:title",
+          name: "og:title",
+          content: "Sejukata"
+        },
+        {
+          hid: "apple-mobile-web-app-title",
+          name: "apple-mobile-web-app-title",
+          content: "Sejukata"
+        },
+        {
+          hid: "og:site_name",
+          name: "og:site_name",
+          content: "Sejukata"
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content: "Tulisan Berbicara, Hati Mendengar"
+        },
+        {
+          hid: "description",
+          name: "description",
+          content: "Tulisan Berbicara, Hati Mendengar"
+        }
+      ],
+      htmlAttrs: {
+        lang: "id",
+        amp: true
+      }
     };
   },
   components: {

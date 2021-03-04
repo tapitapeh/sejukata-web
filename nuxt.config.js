@@ -7,7 +7,6 @@ export default {
   */
   head: {
     title: 'Sejukata',
-    titleTemplate: '%s — Sejukata',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
