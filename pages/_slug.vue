@@ -64,12 +64,40 @@ import { BLOCKS } from "@contentful/rich-text-types";
 export default {
   head() {
     return {
-      title: this.loading <= 0 ? this.ip.items[0].title : "",
+      title: this.loading <= 0 ? this.ip.items[0].title : "Sejukata",
       meta: [
+        {
+          hid: "og:title",
+          name: "og:title",
+          content: this.loading <= 0 ? this.ip.items[0].title : "Sejukata"
+        },
+        {
+          hid: "og:title",
+          name: "og:title",
+          content: this.loading <= 0 ? this.ip.items[0].title : "Sejukata"
+        },
+        {
+          hid: "apple-mobile-web-app-title",
+          name: "apple-mobile-web-app-title",
+          content: this.loading <= 0 ? this.ip.items[0].title : "Sejukata"
+        },
+        {
+          hid: "og:site_name",
+          name: "og:site_name",
+          content: "Sejukata"
+        },
+        {
+          hid: "og:description",
+          name: "og:site_name",
+          content: this.loading <= 0 ? this.ip.items[0].subtitle : "Sejukata"
+        },
         {
           hid: "description",
           name: "description",
-          content: this.loading <= 0 ? this.ip.items[0].subtitle : ""
+          content:
+            this.loading <= 0
+              ? this.ip.items[0].subtitle
+              : "Tulisan Berbicara, Hati Mendengar"
         }
       ],
       htmlAttrs: {
