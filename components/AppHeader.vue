@@ -2,7 +2,7 @@
   <nav class="fixed w-full bg-white z-50">
     <div class="relative container h-16 flex justify-between mx-auto">
       <div
-        class="absolute left-0 h-full sm:relative z-10 px-2 flex items-center lg:px-0"
+        class="absolute sm:relative left-0 h-full z-10 px-2 flex items-center lg:px-0"
       >
         <router-back to="/" class="router-back"> </router-back>
       </div>
@@ -24,7 +24,9 @@
         </nuxt-link>
       </div>
 
-      <div class="relative z-10 px-2 flex items-center lg:px-0"></div>
+      <div
+        class="absolute sm:relative  z-10 px-2 flex items-center lg:px-0"
+      ></div>
     </div>
   </nav>
 </template>
