@@ -1,6 +1,6 @@
-# nuxtjs-windicss-starter
+# Sejukata Blog (Nuxt2 & Contentful CMS)
 
-> Starter Pack
+> A simple blog made with Nuxt2 (WindiCSS, Nuxt Apollo, etc) & Contentful as CMS.
 
 ## Build Setup
 
